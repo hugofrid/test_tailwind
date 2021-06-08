@@ -5,28 +5,72 @@
     body #root {
         width: 100vw;
         height: 100vh;
+        line-height: normal;
     }
     * {
         @apply box-border;
     }
+    /* background */
+    .bg-gradient-01 {
+        @apply bg-gradient-to-b from-primary to-primary-100;
+    }
+    .bg-gradient-02 {
+        @apply bg-gradient-to-b from-primary to-blue;
+    }
+    .bg-gradient-03 {
+        @apply bg-gradient-to-b from-primary to-basic;
+    }
+    .bg-gradient-04 {
+        @apply bg-gradient-to-b from-blue to-basic;
+    }
+    .bg-gradient-05 {
+        @apply bg-gradient-to-b from-blue to-primary;
+    }
 }
 
-.bg-gradient-01 {
-    @apply bg-gradient-to-b from-primary to-primary-100;
-}
 
-.bg-gradient-02 {
-    @apply bg-gradient-to-b from-primary to-blue;
-}
+/* BUTTON*/
 
-.bg-gradient-03 {
-    @apply bg-gradient-to-b from-primary to-basic;
-}
-
-.bg-gradient-04 {
-    @apply bg-gradient-to-b from-blue to-basic;
-}
-
-.bg-gradient-05 {
-    @apply bg-gradient-to-b from-blue to-primary;
+@layer utilities {
+    *:disabled {
+        cursor: default;
+    }
+    /*type*/
+    .btn {
+        border-radius: 6px;
+    }
+    .btn-default {
+        border-radius: 6px;
+        @apply bg-basic-700 text-basic-100;
+        @apply hover:bg-basic-600 disabled:bg-basic-300;
+    }
+    
+    .btn-outline {
+        @apply border-2 border-basic-700;
+        @apply text-basic-700 bg-basic-100;
+        @apply hover:text-basic-600 hover:border-basic-600;
+        @apply  disabled:border-basic-300 disabled:text-basic-300;
+    }
+    
+    .btn-flat {
+        @apply text-basic-700 bg-transparant hover:text-basic-600;
+        @apply disabled:text-basic-300;
+    }
+    /* size */
+    .btn-md {
+        padding: 8px 12px;
+        @apply text-h3;
+    }
+    .btn-xl {
+        padding: 10px 16px;
+        @apply text-h1;
+    }
+    .btn-lg {
+        padding: 8px 16px;
+        @apply text-h2;
+    }
+    .btn-sm {
+        padding: 6px 10px;
+        @apply text-b1;
+    }
 }

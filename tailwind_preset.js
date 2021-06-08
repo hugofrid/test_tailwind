@@ -1,6 +1,7 @@
 module.exports = {
     theme: {
         colors: {
+            transparant: 'transparant',
             primary: {
                 "DEFAULT": "#D33087",
                 500: "#D33087",
@@ -44,6 +45,14 @@ module.exports = {
             c1: "0.6875"
         }
     },
+    variants: {
+        extend: {
+            backgroundColor: ['hover', 'disabled'],
+            borderColor: ['hover', 'disabled'],
+            textColor: ['hover', 'disabled'],
+        }
+    },
+
 
 
 }
